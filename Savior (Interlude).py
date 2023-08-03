@@ -17,8 +17,8 @@ contrabass = Part(CONTRABASS, 4)
 
 violinPhrase = Phrase()
 
-v1p1 = [F4, F4, F4, C4, F4, A4]
-v1d1 = [WN, WN, QN, QN, QN, QN]
+v1p1 = [F4, F4, F4, C4, F4, A4, G4, C4, C4, C4, C4, F4, A4, G4, C4]
+v1d1 = [WN, WN, QN, QN, QN, QN, HN, HN, WN, WN, HN, QN, QN, HN, HN]
 
 violinPhrase.addNoteList(v1p1, v1d1)
 violin1.addPhrase(violinPhrase)
@@ -27,8 +27,8 @@ violin1.addPhrase(violinPhrase)
 
 violin2Phrase = Phrase()
 
-v2p1 = [F4, C5, F4, REST, E4, B4, E4, REST, D4, A4, D4, REST]
-v2d1 = [QN, QN, QN, QN,   QN, QN, QN, QN,   QN, QN, QN, QN]
+v2p1 = [F4, C5, F4, REST, E4, B4, E4, REST, D4, A4, D4, REST, C4, G4, C4, REST, C4, F4, C4, REST, C4, A4, C4, REST, C4, G4, C4, REST, E4, F4, E4, REST]
+v2d1 = [QN] * 4 * 8
 
 violin2Phrase.addNoteList(v2p1, v2d1)
 violin2.addPhrase(violin2Phrase)
@@ -37,8 +37,8 @@ violin2.addPhrase(violin2Phrase)
 
 violaPhrase = Phrase()
 
-vip1 = [C5, C5, C5, REST, B4, B4, B4, REST, A4, A4, A4, REST]
-vid1 = [QN, QN, QN, QN,   QN, QN, QN, QN,   QN, QN, QN, QN]
+vip1 = [C5, C5, C5, REST, B4, B4, B4, REST, A4, A4, A4, REST, G4, G4, G4, REST, F4, F4, G4, REST, G4, G4, G4, REST, G4, G4, G4, REST, F4, F4, F4, REST]
+vid1 = [QN] * 4 * 8
 
 violaPhrase.addNoteList(vip1, vid1)
 viola.addPhrase(violaPhrase)
@@ -47,8 +47,8 @@ viola.addPhrase(violaPhrase)
 
 celloPhrase = Phrase()
 
-cp1 = [D4, REST, REST, D4, D4, REST, REST, D4, D4, REST, REST, D4]
-cd1 = [QN, QN,   QN,   QN, QN, QN,   QN,   QN, QN, QN,   QN,   QN]
+cp1 = [D4, REST, REST, D4, D4, REST, REST, D4, D4, REST, REST, D4, D4, REST, REST, D4, D4, REST, REST, D4, D4, REST, REST, D4, D4, REST, REST, D4, D4, REST, REST, G4]
+cd1 = [QN] * 4 * 8
 
 celloPhrase.addNoteList(cp1, cd1)
 cello.addPhrase(celloPhrase)
@@ -57,11 +57,67 @@ cello.addPhrase(celloPhrase)
 
 bassPhrase = Phrase()
 
-bp1 = [D5, D5, D5]
-bd1 = [WN, WN, WN]
+bp1 = [D5, D5, D5, D5, D4, D4, D4, D4,  G4]
+bd1 = [WN, WN, WN, WN, WN, WN, WN, DHN, QN]
 
 bassPhrase.addNoteList(bp1, bd1)
 contrabass.addPhrase(bassPhrase)
+
+
+#Part 2
+# Violin
+
+violinPhrase = Phrase()
+
+v1p1 = []
+v1d1 = []
+
+violinPhrase.addNoteList(v1p1, v1d1)
+violin1.addPhrase(violinPhrase)
+
+# Violin 2
+
+violin2Phrase = Phrase()
+
+v2p1 = []
+v2d1 = []
+
+violin2Phrase.addNoteList(v2p1, v2d1)
+violin2.addPhrase(violin2Phrase)
+
+# Viola
+
+violaPhrase = Phrase()
+
+vip1 = []
+vid1 = []
+
+violaPhrase.addNoteList(vip1, vid1)
+viola.addPhrase(violaPhrase)
+
+# Cello
+
+celloPhrase = Phrase()
+
+cp1 = []
+cd1 = []
+
+celloPhrase.addNoteList(cp1, cd1)
+cello.addPhrase(celloPhrase)
+
+# Contrabass
+
+bassPhrase = Phrase()
+
+bp1 = []
+bd1 = []
+
+bassPhrase.addNoteList(bp1, bd1)
+contrabass.addPhrase(bassPhrase)
+
+
+
+# Adding everything together
 
 violinPhrase.setDynamic(20)
 savior.addPart(violin1)
@@ -75,3 +131,4 @@ bassPhrase.setDynamic(63)
 savior.addPart(contrabass)
  
 Play.midi(savior)
+Write.midi(savior, "Savior.mid")
