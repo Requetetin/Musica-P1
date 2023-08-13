@@ -53,11 +53,60 @@ trd1 = [QN, EN, EN, EN, EN, QN] + [WN] + [WN] + [WN] + [QN]
 trombonePhrase.addNoteList(trp1, trd1)
 trombone.addPhrase(trombonePhrase)
 
+### DRUM BEAT
+drumsPart = Part("Drums", 0, 9)
+drumsPart.setTempo(120.0)
+
+hiHatPhrase = Phrase(12.0)
+snarePhrase = Phrase(12.0)
+tomPhrase = Phrase(12.0)
+kickPhrase = Phrase(12.0)
+clapPhrase = Phrase(24.0)
+drumsDuration = [SN] * 16
+
+## hiHat
+hhtp = [CHH, REST] * 6 + [REST] * 4
+hiHatPhrase.addNoteList(hhtp, drumsDuration)
+
+## snare
+snrp = [REST] * 4 + [STK, REST, STK, REST] + [REST] * 8
+snarePhrase.addNoteList(snrp, drumsDuration)
+
+## tom
+tomp = [REST, LFT] + [REST] * 9 + [LFT] * 2 + [REST] * 3 
+tomPhrase.addNoteList(tomp, drumsDuration)
+
+## kick
+kikp = [BDR] + [REST] * 6 + [BDR] + [REST] * 8
+kickPhrase.addNoteList(kikp, drumsDuration)
+
+## Clap
+clpp = [REST] * 12 + [CLP, REST] * 2
+clapPhrase.addNoteList(clpp, drumsDuration)
+
+## Repeat 6 times, the last 3, add claps
+Mod.repeat(hiHatPhrase, 6)
+Mod.repeat(snarePhrase, 6)
+Mod.repeat(tomPhrase, 6)
+Mod.repeat(kickPhrase, 6)
+Mod.repeat(clapPhrase, 3)
+
+## Combining drums
+drumsPart.addPhrase(hiHatPhrase)
+drumsPart.addPhrase(snarePhrase)
+drumsPart.addPhrase(tomPhrase)
+drumsPart.addPhrase(kickPhrase)
+drumsPart.addPhrase(clapPhrase)
+
+
+## Composing full song
 
 original.addPart(trumpet1)
 original.addPart(trumpet2)
 original.addPart(horn)
 original.addPart(trombone)
+original.addPart(drumsPart)
  
+#View.sketch(original)
 Play.midi(original)
 Write.midi(original, "Trial.mid")
