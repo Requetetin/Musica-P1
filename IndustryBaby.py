@@ -23,11 +23,31 @@ trombone1n2Duration = [ QN, 0.33, 0.33, 0.33,   QN, QN,       QN,     0.33,     
 trombone1n2Phrase.addNoteList(trombone1n2Pitch, trombone1n2Duration)
 
 #Page_2
-trombone1n2Pitch    = [ G3, F3, G3, A3, G3, F3, G3, F3,  E3, REST, E3, F3, G3 ]
-trombone1n2Duration = [ EN, EN, HN, EN, EN, WN, EN, EN, DHN,   QN, QN, QN, QN ]
+trombone1n2Pitch    = [  G3, F3, G3, A3, G3, F3, G3, F3,  E3, REST, E3, F3, G3
+                       , G3, F3, G3, A3, G3, F3, G3, F3,  E3, REST, E3, F3, G3
+                       , G3, F3, G3, A3, G3, F3, G3, F3,  E3, REST, E3, F3, G3
+                       , G3, F3, G3, A3, G3, F3  ]
+trombone1n2Duration = [  EN, EN, HN, EN, EN, WN, EN, EN, DHN,   QN, QN, QN, QN
+                       , EN, EN, HN, EN, EN, WN, EN, EN, DHN,   QN, QN, QN, QN
+                       , EN, EN, HN, EN, EN, WN, EN, EN, DHN,   QN, QN, QN, QN
+                       , EN, EN, HN, EN, EN, WN  ]
 
 trombone1n2Phrase.addNoteList(trombone1n2Pitch, trombone1n2Duration)
 
+#Page_3
+
+trombone1n2Pitch    = [ G3, F3,  E3, REST, E3, F3, G3, REST, REST
+                        , REST, REST, REST, REST
+                        , REST, REST, REST, REST
+                        , REST, REST,  G3, F3, G3, A3, G3, F3 ]
+trombone1n2Duration = [ EN, EN, DHN,   QN, QN, QN, QN,   WN,   WN
+                        ,   WN,   WN,   WN,   WN
+                        ,   WN,   WN,   WN,   WN
+                        ,   WN,   WN,  EN, EN, HN, EN, EN, WN ]
+
+trombone1n2Phrase.addNoteList(trombone1n2Pitch, trombone1n2Duration)
+
+#Page_4
 
 trombone.addPhrase(trombone1n2Phrase)
 industryBaby.addPart(trombone)
