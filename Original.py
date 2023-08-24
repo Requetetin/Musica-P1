@@ -130,18 +130,14 @@ mainDrumsPart2.addPhrase(mainDrumPhrase2)
 
 ## Electric Bass beat
 electricBassPart = Part(ELECTRIC_BASS, 4)
-electricBassPart.setTempo(60.0)
+electricBassPart.setTempo(120.0)
 electricBassPart2 = Part(ELECTRIC_BASS, 4)
-electricBassPart2.setTempo(60.0)
+electricBassPart2.setTempo(120.0)
 
-electricBassPhrase = Phrase(17.5)
-electricBassPhrase2 = Phrase(91.0)
-electricBassPitch =    [E2, E1, E1, F1, G1, REST, G1, G1, A1, B1, A1, G1] * 2
-electricBassDuration = [SN, SN, SN, SN, SN, SN,   QN, SN, SN, SN, EN, SN] * 2
-electricBassPhrase.addNoteList(electricBassPitch, electricBassDuration)
-electricBassPhrase2.addNoteList(electricBassPitch, electricBassDuration)
-electricBassPitch =    [E2, E1, E1, F1, G1, REST, G1, G2, F2, D2, D2, B1, B1, A1, G1]
-electricBassDuration = [SN, SN, SN, SN, SN, SN,   SN, SN, SN, SN, SN, SN, SN, EN, SN]
+electricBassPhrase = Phrase(35.0)
+electricBassPhrase2 = Phrase(182.0)
+electricBassPitch =    [C3,  REST, C3, B2, B2, B2, REST, REST, REST, B2, E2, E3, D3, REST, D3, D4, D3, A2,  REST, AS2, B2, B2, B2, REST, REST, REST, FS2, E2, REST, G2, A2, B2, C3,  REST, C3, B2, B2, B2, REST, REST, REST, B2, E2, E3, D3, REST, D3, D4, D3, A2,  REST, A2, B2, B2, B2, REST, REST, REST, FS2, E2, REST, G2, A2, B2]
+electricBassDuration = [DQN, SN,   SN, SN, EN, SN, SN,   SN,   SN,   SN, QN, QN, QN, SN,   SN, SN, SN, DQN, SN,   SN,  SN, EN, SN, SN,   SN,   SN,   SN,  QN, SN,   SN, SN, SN, DQN, SN,   SN, SN, EN, SN, SN,   SN,   SN,   SN, QN, QN, QN, SN,   SN, SN, SN, DQN, SN,   SN, SN, EN, SN, SN,   SN,   SN,   SN,  QN, SN,   SN, SN, SN]
 electricBassPhrase.addNoteList(electricBassPitch, electricBassDuration)
 electricBassPhrase2.addNoteList(electricBassPitch, electricBassDuration)
 Mod.repeat(electricBassPhrase, 3)
@@ -155,16 +151,19 @@ mainTromboneBeat.setTempo(120.0)
 mainTromboneBeat2 = Part(TROMBONE, 3)
 mainTromboneBeat2.setTempo(120.0)
 
-mainTrombonePhrase = Phrase(43.0)
+mainTrombonePhrase = Phrase(63.0)
 mainTrombonePhrase2 = Phrase(182.0)
-mainTrombonePitch = [REST, B2, B2, GS2, B2, GS2, REST, GS2, GS2, GS2, GS2, GS2, REST, GS2, GS2, GS2, GS2, GS2, E2, CS2, REST, GS2, GS2, GS2, GS2,
-                     FS2, FS2, FS2, FS2, GS2, REST, CS2, CS2, CS2, CS2, E2, E2, E2, E2, FS2, FS2, FS2, FS2, FS2, FS2, FS2, GS2, REST, B2, GS2, B2, GS2, B2, GS2, FS2, GS2]
-mainTromboneDurat = [EN,   SN, SN, EN,  EN, QN,  EN,   SN,  SN,  EN,  EN,  QN,  EN,   SN,  SN,  EN,  EN,  EN,  EN, QN,  EN,   SN,  SN,  EN,  EN,
-                     EN,  EN,  EN,  EN,  QN,  QN,   SN,  EN,  SN,  EN,  SN, EN, SN, EN, SN,  EN,  SN,  EN,  EN,  EN,  EN,  QN,  QN,   SN, EN,  SN, EN,  EN, QN,  HN,  DHN]
+## Sample from SpottieOttieDopaliscious 
+# mainTrombonePitch = [REST, B2, B2, GS2, B2, GS2, REST, GS2, GS2, GS2, GS2, GS2, REST, GS2, GS2, GS2, GS2, GS2, E2, CS2, REST, GS2, GS2, GS2, GS2,
+#                      FS2, FS2, FS2, FS2, GS2, REST, CS2, CS2, CS2, CS2, E2, E2, E2, E2, FS2, FS2, FS2, FS2, FS2, FS2, FS2, GS2, REST, B2, GS2, B2, GS2, B2, GS2, FS2, GS2]
+# mainTromboneDurat = [EN,   SN, SN, EN,  EN, QN,  EN,   SN,  SN,  EN,  EN,  QN,  EN,   SN,  SN,  EN,  EN,  EN,  EN, QN,  EN,   SN,  SN,  EN,  EN,
+#                      EN,  EN,  EN,  EN,  QN,  QN,   SN,  EN,  SN,  EN,  SN, EN, SN, EN, SN,  EN,  SN,  EN,  EN,  EN,  EN,  QN,  QN,   SN, EN,  SN, EN,  EN, QN,  HN,  DHN]
+mainTrombonePitch = [[E4, E5], [G4, G5], [G4, G5], [E4, E5], [E4, E5], [C4, C5], REST, REST, [DS4, DS5], [E4, E5], [F4, F5], [B4, G5], [E4, E5], REST, REST, [G4, G5], [E4, E5], [D4, D5], [C4, C5], [GS3, GS4], [A3, A4], REST, REST, REST, [AS3, AS4], [B4, B5], [E4, E5], [D4, D5], [E4, E5], REST]
+mainTromboneDurat = [QN,       EN,       SN,       SN,       EN,       SN,       SN,   SN,   SN,         SN,       SN,       DEN,      EN,       SN,   SN,   SN,       QN,       EN,       SN,       SN,         QN,       SN,   SN,   SN,   SN,         QN,       EN,       EN,       QN,       QN]
 mainTrombonePhrase.addNoteList(mainTrombonePitch, mainTromboneDurat)
 mainTrombonePhrase2.addNoteList(mainTrombonePitch, mainTromboneDurat)
-Mod.repeat(mainTrombonePhrase, 2)
-Mod.repeat(mainTrombonePhrase2, 2)
+Mod.repeat(mainTrombonePhrase, 4)
+Mod.repeat(mainTrombonePhrase2, 6)
 mainTromboneBeat.addPhrase(mainTrombonePhrase)
 mainTromboneBeat2.addPhrase(mainTrombonePhrase2)
 
