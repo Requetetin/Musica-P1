@@ -118,7 +118,7 @@ mainDrumsPart2 = Part("Main drum beat", 0, 9)
 mainDrumsPart2.setTempo(120.0)
 
 mainDrumPhrase = Phrase(35.0)
-mainDrumPhrase2 = Phrase(182.0)
+mainDrumPhrase2 = Phrase(184.0)
 mainDrumPitch = [[SNR, BDR], CHH, REST, CHH, SNR, SNR, SNR, CHH, OHH, CHH, SNR, REST, BDR, SNR, CHH, REST]
 mainDrumDurat = [SN] * 16
 mainDrumPhrase.addNoteList(mainDrumPitch, mainDrumDurat)
@@ -135,7 +135,7 @@ electricBassPart2 = Part(ELECTRIC_BASS, 4)
 electricBassPart2.setTempo(120.0)
 
 electricBassPhrase = Phrase(35.0)
-electricBassPhrase2 = Phrase(182.0)
+electricBassPhrase2 = Phrase(184.0)
 electricBassPitch =    [C3,  REST, C3, B2, B2, B2, REST, REST, REST, B2, E2, E3, D3, REST, D3, D4, D3, A2,  REST, AS2, B2, B2, B2, REST, REST, REST, FS2, E2, REST, G2, A2, B2, C3,  REST, C3, B2, B2, B2, REST, REST, REST, B2, E2, E3, D3, REST, D3, D4, D3, A2,  REST, A2, B2, B2, B2, REST, REST, REST, FS2, E2, REST, G2, A2, B2]
 electricBassDuration = [DQN, SN,   SN, SN, EN, SN, SN,   SN,   SN,   SN, QN, QN, QN, SN,   SN, SN, SN, DQN, SN,   SN,  SN, EN, SN, SN,   SN,   SN,   SN,  QN, SN,   SN, SN, SN, DQN, SN,   SN, SN, EN, SN, SN,   SN,   SN,   SN, QN, QN, QN, SN,   SN, SN, SN, DQN, SN,   SN, SN, EN, SN, SN,   SN,   SN,   SN,  QN, SN,   SN, SN, SN]
 electricBassPhrase.addNoteList(electricBassPitch, electricBassDuration)
@@ -152,7 +152,7 @@ mainTromboneBeat2 = Part(TROMBONE, 3)
 mainTromboneBeat2.setTempo(120.0)
 
 mainTrombonePhrase = Phrase(63.0)
-mainTrombonePhrase2 = Phrase(182.0)
+mainTrombonePhrase2 = Phrase(184.0)
 ## Sample from SpottieOttieDopaliscious 
 # mainTrombonePitch = [REST, B2, B2, GS2, B2, GS2, REST, GS2, GS2, GS2, GS2, GS2, REST, GS2, GS2, GS2, GS2, GS2, E2, CS2, REST, GS2, GS2, GS2, GS2,
 #                      FS2, FS2, FS2, FS2, GS2, REST, CS2, CS2, CS2, CS2, E2, E2, E2, E2, FS2, FS2, FS2, FS2, FS2, FS2, FS2, GS2, REST, B2, GS2, B2, GS2, B2, GS2, FS2, GS2]
@@ -166,6 +166,32 @@ Mod.repeat(mainTrombonePhrase, 4)
 Mod.repeat(mainTrombonePhrase2, 6)
 mainTromboneBeat.addPhrase(mainTrombonePhrase)
 mainTromboneBeat2.addPhrase(mainTrombonePhrase2)
+
+
+## Chorus
+### Bass beat
+electricBassChorus = Part(ELECTRIC_BASS, 4)
+electricBassChorus.setTempo(180.0)
+electricBassChorusPhrase = Phrase(179.0)
+
+electricBassPitch =    [B2, E3, B2, A2, C3, E3, B2, REST, A2, A2, REST, B2, REST, A2, A2, F2]
+electricBassDuration = [WN, HN, HN, QN, QN, QN, QN, QN,   QN, QN, QN,   HN, HN,   QN, QN, HN]
+electricBassChorusPhrase.addNoteList(electricBassPitch, electricBassDuration)
+
+Mod.repeat(electricBassChorusPhrase, 4)
+electricBassChorus.addPhrase(electricBassChorusPhrase)
+
+### Synth Beat
+synthChorus = Part(SYNTH_BASS2, 11)
+synthChorus.setTempo(80.0)
+synthPhraseChorus = Phrase(79.1)
+
+synthPitch = [F3, D3, E3, C3, REST, E3, G3, B3, E3, REST, D3, E3, C3, A2, REST, A2, A2, D3, F3, REST, E3, E3, A3, G3, REST, C3, A2, F3, A3, REST, A3, E3, D3, G3, REST, C3, A2, D3, G3, REST, C3, C3, A3, D3, C3, REST, REST, C3, C3, G3, B2, A2, REST, REST, D3, D3, A3, E3, B3, REST, REST, G2, G2, G2, E2, D3, REST, REST]
+synthDurat = [SN, SN, SN, SN, QN] * 8 + [SN, SN, SN, SN, SN, SN, EN] * 4
+synthPhraseChorus.addNoteList(synthPitch, synthDurat)
+
+Mod.repeat(synthPhraseChorus, 2)
+synthChorus.addPhrase(synthPhraseChorus)
 
 
 ## Composing full song
@@ -188,7 +214,9 @@ mainTrombonePhrase.setDynamic(50)
 original.addPart(mainTromboneBeat)
 
 # Chorus
-
+electricBassChorusPhrase.setDynamic(70)
+original.addPart(electricBassChorus)
+original.addPart(synthChorus)
 
 # Repeat main after chorus
 original.addPart(mainDrumsPart2)
