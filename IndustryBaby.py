@@ -118,58 +118,60 @@ altoSax1n2Phrase.addNoteList(altoSax1n2Pitch, altoSax1n2Duration)
 trombone1n2Pitch    = [ G3, F3,  E3, REST, E3, F3, G3, REST, REST
                         , REST, REST, REST, REST
                         , REST, REST, REST, REST
-                        , REST,  G3, F3, G3, A3, G3, REST]
+                        , REST, REST,  G3, F3, G3, A3, G3, REST]
 trombone1n2Duration = [ EN, EN, DHN,   QN, QN, QN, QN,   WN,   WN
                         ,   WN,   WN,   WN,   WN
                         ,   WN,   WN,   WN,   WN
-                        ,   WN,   EN, EN, HN, EN, EN, WN]
+                        ,   WN,   WN,   EN, EN, HN, EN, EN, WN]
 trombone1n2Phrase.addNoteList(trombone1n2Pitch, trombone1n2Duration)
 
-# trumpet1n2Pitch = [B5, A5, B5, A5, B5, C6, C6, REST, F5, G5, A5, C6, B5, A5, B5, A5, G5, G5, G5, G5, G5, G5
-#                     , A5, G5, F5, F5, E5, F5, REST, REST
-#                     , REST, REST, REST, REST
-#                     , REST, REST, REST, REST]
-# trumpet1n2Duration = [EN, EN, EN, EN, EN, EN, QN, QN, QN, QN, QN, EN, EN, HN, EN, EN, DQN, EN, EN, EN, EN, EN
-#                     , EN, EN, HN, EN, EN, QN, QN, HN
-#                     , WN, WN, WN, WN
-#                     , WN, WN, WN, WN]
-# trumpet1n2Phrase.addNoteList(trumpet1n2Pitch, trumpet1n2Duration)
+trumpet1n2Pitch =   [ B5, A5, B5, A5, B5, C6, C6, REST, F5, G5, A5, C6, B5, A5, B5, A5, G5, G5, G5, G5, G5, G5
+                    , A5, G5, F5, F5, E5, F5, REST, REST
+                    , REST, REST, REST, REST
+                    , REST, REST, REST, REST 
+                    , REST, REST]
+trumpet1n2Duration = [EN, EN, EN, EN, EN, EN, QN,   QN, QN, QN, QN, EN, EN, HN, EN, EN, DQN, EN, EN, EN, EN, EN
+                    , EN, EN, HN, EN, EN, QN, QN, HN
+                    , WN, WN, WN, WN
+                    , WN, WN, WN, WN
+                    , WN, WN]
+trumpet1n2Phrase.addNoteList(trumpet1n2Pitch, trumpet1n2Duration)
 
-# clarinet1n2Pitch = [ B5, A5, B5, A5, B5, C6, C6, REST, F5, G5, A5, C6, B5, A5, B5, A5, G5, G5, G5, G5, G5,G5
-#                     , A5, G5, F5, F5, E5, F5, REST, REST
-#                     , REST, REST, REST, REST
-#                     , REST, REST, REST, REST
-#                     ]
-# clarinet1n2Duration = [ EN, EN, EN, EN, EN, EN, QN, QN, QN, QN, QN, EN, EN, HN, EN, EN, DQN, EN, EN, EN, EN, EN
-#                     , EN, EN, HN, EN, EN, QN, QN, HN
-#                     , WN, WN, WN, WN
-#                     , WN, WN, WN, WN
-#                     ]
-# clarinet1n2Phrase.addNoteList(clarinet1n2Pitch, clarinet1n2Duration)
+clarinet1n2Pitch = [ B5, A5, B5, A5, B5, C6, C6, REST, F5, G5, A5, C6, B5, A5, B5, A5, G5, G5, G5, G5, G5, G5
+                    , A5, G5, F5, F5, E5, F5, REST, REST
+                    , REST, REST, REST, REST
+                    , REST, REST, REST, REST
+                    , REST, REST]
+clarinet1n2Duration = [ EN, EN, EN, EN, EN, EN, QN, QN, QN, QN, QN, EN, EN, HN, EN, EN, DQN, EN, EN, EN, EN, EN
+                    , EN, EN, HN, EN, EN, QN, QN, HN
+                    , WN, WN, WN, WN
+                    , WN, WN, WN, WN
+                    , WN, WN]
+clarinet1n2Phrase.addNoteList(clarinet1n2Pitch, clarinet1n2Duration)
 
-# altoSax1n2Pitch = [ F5, E5, F5, E5, F5, G5, G5, REST, C5, D5, E5, G5, F5, E5, F5, E5, D5, D5, D5, D5, D5, D5
-#                     , A5, G5, F5, F5, E5, F5, REST, REST
-#                     , REST , REST, REST, REST
-#                     , REST, REST, REST, REST
-#                     ]
-# altoSax1n2Duration = [ EN, EN, EN, EN, EN, EN, QN, QN, QN, QN, QN, EN, EN, HN, EN, EN, DQN, EN, EN, EN, EN, EN
-#                     , EN, EN, HN, EN, EN, QN, QN, HN
-#                     , WN, WN, WN, WN
-#                     , WN, WN, WN, WN
-#                     ]
-# altoSax1n2Phrase.addNoteList(altoSax1n2Pitch, altoSax1n2Duration)
+altoSax1n2Pitch = [ F5, E5, F5, E5, F5, G5, G5, REST, C5, D5, E5, G5, F5, E5, F5, E5, D5, D5, D5, D5, D5, D5
+                    , A5, G5, F5, F5, E5, F5, REST, REST
+                    , REST , REST, REST, REST
+                    , REST, REST, REST, REST
+                    , REST, REST]
+altoSax1n2Duration = [ EN, EN, EN, EN, EN, EN, QN, QN, QN, QN, QN, EN, EN, HN, EN, EN, DQN, EN, EN, EN, EN, EN
+                    , EN, EN, HN, EN, EN, QN, QN, HN
+                    , WN, WN, WN, WN
+                    , WN, WN, WN, WN
+                    , WN, WN]
+altoSax1n2Phrase.addNoteList(altoSax1n2Pitch, altoSax1n2Duration)
 
 #Page_4
 
-# trombone1n2Pitch    = [   G3, F3,  E3,  REST, E3, F3, G3,  G3, F3, G3, A3, G3, REST
-#                         , G3, F3, E3, REST, G3, F3, G3, A3, G3, REST
-#                         , G3, F3, E3, REST, E3, F3, G3, G3, F3, G3, A3, G3, REST
-#                         , G3, F3, E3, REST, E3, F3, G3, G3, F3, G3, A3, G3, REST ]
-# trombone1n2Duration = [   EN, EN,   DHN, QN, QN, QN, QN,  EN, EN, HN, EN, EN, WN
-#                         , EN, EN, DHN, WN, EN, EN, HN, EN, EN, WN
-#                         , EN, EN, DHN, QN, QN, QN, QN, EN, EN, HN, EN, EN, WN
-#                         , EN, EN, DHN, QN, QN, QN, QN, EN, EN, HN, EN, EN, WN]
-# trombone1n2Phrase.addNoteList(trombone1n2Pitch, trombone1n2Duration)
+trombone1n2Pitch    = [   G3, F3,  E3,  REST, E3, F3, G3,  G3, F3, G3, A3, G3, REST
+                        , G3, F3, E3, REST, G3, F3, G3, A3, G3, REST
+                        , G3, F3, E3, REST, E3, F3, G3, G3, F3, G3, A3, G3, REST
+                        , G3, F3, E3, REST, E3, F3, G3, G3, F3, G3, A3, G3, REST ]
+trombone1n2Duration = [   EN, EN, DHN,    QN, QN, QN, QN,  EN, EN, HN, EN, EN, WN
+                        , EN, EN, DHN, WN, EN, EN, HN, EN, EN, WN
+                        , EN, EN, DHN, QN, QN, QN, QN, EN, EN, HN, EN, EN, WN
+                        , EN, EN, DHN, QN, QN, QN, QN, EN, EN, HN, EN, EN, WN]
+trombone1n2Phrase.addNoteList(trombone1n2Pitch, trombone1n2Duration)
 
 # trumpet1n2Pitch = []
 # trumpet1n2Duration = []
@@ -177,15 +179,15 @@ trombone1n2Phrase.addNoteList(trombone1n2Pitch, trombone1n2Duration)
 
 #Page_5
 
-# trombone1n2Pitch    = [   G3, F3,  E3, REST, E3, F3, G3, G3, F3, G3, A3, G3, REST
-#                         , G3, F3,  E3, REST, E3, F3, G3, G3, F3, G3, A3, G3, REST
-#                         , G3, F3, E3, REST, E3, F3, G3, REST, REST
-#                         , REST, REST, E3, F3, G3]
-# trombone1n2Duration = [   EN, EN, DHN, QN, QN, QN, QN, EN, EN, HN, EN, EN, WN
-#                         , EN, EN, DHN, QN, QN, QN, QN, EN, EN, HN, EN, EN, WN
-#                         , QN, QN, DHN, QN, QN, QN, QN, WN, WN
-#                         , WN, QN, QN, QN, QN]
-# trombone1n2Phrase.addNoteList(trombone1n2Pitch, trombone1n2Duration)
+trombone1n2Pitch    = [   G3, F3,  E3, REST, E3, F3, G3, G3, F3, G3, A3, G3, REST
+                        , G3, F3,  E3, REST, E3, F3, G3, G3, F3, G3, A3, G3, REST
+                        , G3, F3, E3, REST, E3, F3, G3, REST, REST
+                        , REST, REST, E3, F3, G3]
+trombone1n2Duration = [   EN, EN, DHN, QN, QN, QN, QN, EN, EN, HN, EN, EN, WN
+                        , EN, EN, DHN, QN, QN, QN, QN, EN, EN, HN, EN, EN, WN
+                        , QN, QN, DHN, QN, QN, QN, QN, WN, WN
+                        , WN, QN, QN, QN, QN]
+trombone1n2Phrase.addNoteList(trombone1n2Pitch, trombone1n2Duration)
 
 # trumpet1n2Pitch = []
 # trumpet1n2Duration = []
@@ -193,11 +195,11 @@ trombone1n2Phrase.addNoteList(trombone1n2Pitch, trombone1n2Duration)
 
 #Page_6
 
-# trombone1n2Pitch    = [   G3, F3,  G3, A3, G3, REST, G3, F3, E3, REST, E3, F3, G3
-#                         , G3, F3, G3, A3, G3, REST, G3, F3, E3, REST, E3, F3, G3]
-# trombone1n2Duration = [   EN, EN, HN, EN, EN, WN, EN, EN, DHN, QN, QN, QN, QN
-#                         , EN, EN, HN, EN, EN, WN, EN, EN, DHN, QN, QN, QN, QN]
-# trombone1n2Phrase.addNoteList(trombone1n2Pitch, trombone1n2Duration)
+trombone1n2Pitch    = [   G3, F3,  G3, A3, G3,  REST, G3, F3,  E3, REST, E3, F3, G3
+                        , G3, F3,  G3, A3, G3,  REST, G3, F3,  E3, REST, E3, F3, G3]
+trombone1n2Duration = [   EN, EN,  HN, EN, EN,    WN, EN, EN, DHN,   QN, QN, QN, QN
+                        , EN, EN,  HN, EN, EN,    WN, EN, EN, DHN,   QN, QN, QN, QN]
+trombone1n2Phrase.addNoteList(trombone1n2Pitch, trombone1n2Duration)
 
 # trumpet1n2Pitch = []
 # trumpet1n2Duration = []
